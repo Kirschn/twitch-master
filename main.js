@@ -156,8 +156,8 @@ setInterval(function() {
 		var command = "nop";
 		console.log(elCounterArray);
 		console.log(elCounterArray.length);
-		
-		for (var i = 0; i < elCounterArray.length; i++) {
+
+		for (var i = 0; elCounterArray[i] !== undefined; i++) {
 			console.log("Current Counter Iteration: " +i);
 			var currentFuck = elCounterArray[i];
 			console.log("current fuck: ");
