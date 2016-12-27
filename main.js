@@ -154,19 +154,26 @@ setInterval(function() {
 		})
 		elCounterArray.sort(sortFunction);
 		var sortIndex = 0;
-		console.log(elCounterArray);
-		if (exports.map[elCounterArray[sortIndex][1]] == undefined) {
+		console.log(elCounterArray)
+		var currIt = 0;
+		elCounterArray.forEach(function(currentFuck) {
+			elSortArray[currIt] = currentFuck;
+			currIt++;
+		})
+
+		if (exports.map[elSortArray[sortIndex][1]] == undefined) {
 			console.log("No commands.");
-			console.log(elCounterArray[sortIndex]);
+			console.log(elSortArray[sortIndex]);
 		} else {
 
 
-		var winningCommand = elCounterArray[sortIndex][1];
-		twitch_chat.say("#"+config.nick, "Winning Command: " + winningCommand + " (" + elCounterArray[sortIndex][0] + " Votes, " + elVotingArray.length + " total)");
-		elVotingArray = [];
-		elCounterArray = [];
+		var winningCommand = elSortArray[sortIndex][1];
+		twitch_chat.say("#"+config.nick, "Winning Command: " + winningCommand + " (" + elSortArray[sortIndex][0] + " Votes, " + elVotingArray.length + " total)");
 		qemu_input(winningCommand);
 	}
+		elVotingArray = [];
+		elCounterArray = [];
+		elSortArray = [];
 	}
 
 	
