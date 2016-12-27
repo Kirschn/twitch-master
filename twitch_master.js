@@ -222,7 +222,7 @@ function democracy_related()
 
 	if (command_mode == 'demorchy') {
 		/* tampering the total messages array (command_count) before it undergoes analysis */
-		var demorchy_pool = Math.round(Object.keys(last_tally).length/3),
+		var demorchy_pool = Math.round(Object.keys(last_tally).length/8),
 			users_voted = [],
 			rand_int;
 
