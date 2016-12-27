@@ -226,7 +226,8 @@ function democracy_related()
 			users_voted = [],
 			rand_int;
 
-		while (users_voted.length < demorchy_pool) {
+		//while (users_voted.length < demorchy_pool) {
+		while (true) {
 			for (var user in last_tally) {
 				rand_int = crypto.randomBytes(4).readUInt32BE(0);
 
