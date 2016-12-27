@@ -144,6 +144,7 @@ function sortFunction(a, b) {
 }
 setInterval(function() {
 	if (elVotingArray !== [] && elVotingArray.length > 3) {
+		console.log("tick");
 		elVotingArray.forEach(function(currentVote) {
 			if (elCounterArray[currentVote.text] == undefined) {
 				elCounterArray[currentVote.text] = [1, currentVote.text];
@@ -153,14 +154,18 @@ setInterval(function() {
 		})
 		elCounterArray.sort(sortFunction);
 		var sortIndex = 0;
-		while (exports.map[elCounterArray[sortIndex][1]] == undefined) {
-			sortIndex++;
-		}
+		if (exports.map[elCounterArray[sortIndex][1]] == undefined) {
+			console.log("No commands.");
+			console.log(elCounterArray[sortIndex]);
+		} else {
+
+
 		var winningCommand = elCounterArray[sortIndex][1];
 		twitch_chat.say("#"+config.nick, "Winning Command: " + winningCommand + " (" + elCounterArray[sortIndex][0] + " Votes, " + elVotingArray.length + " total)");
 		elVotingArray = [];
 		elCounterArray = [];
 		qemu_input(winningCommand);
+	}
 	}
 
 	
