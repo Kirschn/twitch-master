@@ -155,13 +155,14 @@ setInterval(function() {
 		var currVotes = 0;
 		var command = "nop";
 		console.log(elCounterArray);
-		elCounterArray.forEach(function(currentFuck) {
+		for (var i = 0; i < elCounterArray.length; i++;) {
+			var currentFuck = elCounterArray[i];
 			console.log(currentFuck);
 			if (currentFuck[0] > currVotes) {
 				currVotes = currentFuck[0];
 				command = currentFuck[1];
 			}
-		});
+		}
 		if (exports.map[command] == undefined) {
 			console.log("No commands.");
 			console.log(command);
