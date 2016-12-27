@@ -839,6 +839,7 @@ function main()
 	});
 
 	twitch_group.send('CAP REQ', 'twitch.tv/commands');
+	
 	twitch_group.addListener('raw', function(message) {
 		var valid_op = false;
 
@@ -870,7 +871,9 @@ function main()
 			}
 		}
 	});
-
+	twitch_chat.send('CAP', 'REQ', 'twitch.tv/commands');
+	twitch_chat.send('CAP', 'REQ', 'twitch.tv/membership');
+	twitch_chat.send('CAP', 'REQ', 'twitch.tv/tags');
 	twitch_chat.addListener('message#' + config.nick, function(from, msg) {
 		console.log(from + ': ' + msg);
 
