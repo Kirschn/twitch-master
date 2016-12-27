@@ -107,7 +107,7 @@ function voting_cmd_handle(selected_command)
 	voting_command = null;
 }
 var elVotingArray = [];
-var elCounterArray = [];
+var elCounterArray = {};
 var elSortArray = [];
 function qemu_input(selected_command) {
 	if (exports.map[selected_command] !== "") {
@@ -157,7 +157,7 @@ setInterval(function() {
 		console.log(elCounterArray);
 		console.log(elCounterArray.length);
 
-		for (var i = 0; elCounterArray[i] !== undefined; i++) {
+		for (var i in elCounterArray) {
 			console.log("Current Counter Iteration: " +i);
 			var currentFuck = elCounterArray[i];
 			console.log("current fuck: ");
