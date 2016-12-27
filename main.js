@@ -154,7 +154,7 @@ setInterval(function() {
 		})
 		elCounterArray.sort(sortFunction);
 		var sortIndex = 0;
-		console.log(elCounterArray)
+		console.log(elCounterArray[sortIndex])
 		var currIt = 0;
 		elCounterArray.forEach(function(currentFuck) {
 			elSortArray[currIt] = currentFuck;
