@@ -155,6 +155,8 @@ setInterval(function() {
 		var currVotes = 0;
 		var command = "nop";
 		console.log(elCounterArray);
+		console.log(elCounterArray.length);
+		
 		for (var i = 0; i < elCounterArray.length; i++) {
 			console.log("Current Counter Iteration: " +i);
 			var currentFuck = elCounterArray[i];
