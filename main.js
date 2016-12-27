@@ -17,10 +17,7 @@ var twitch_chat = new irc.Client('irc.twitch.tv', config.nick, {
 	password: config.password,
 	autoConnect: true
 }),
-setTimeout(function() {
 
-	twitch_chat.join("#" + config.nick);
-},1000);
 blacklist = JSON.parse(fs.readFileSync('./blacklist.json', 'utf8'));
 filters = JSON.parse(fs.readFileSync('./filters.json', 'utf8'));
 ops = JSON.parse(fs.readFileSync('./ops.json', 'utf8'));
@@ -29,6 +26,10 @@ mouse_range = {
 		min: -3000,
 		max:  3000
 	};
+	setTimeout(function() {
+
+	twitch_chat.join("#" + config.nick);
+},1000);
 exports.map = map_new;
 function mouse_movement(command)
 {
