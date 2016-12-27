@@ -124,6 +124,7 @@ function qemu_input(selected_command) {
 
 	}
 }
+}
 twitch_chat.on("message#", function(nick, to, text, message) {
 	elVotingArray.push({"nick": nick, "text": text});
 	console.log([nick, text]);
