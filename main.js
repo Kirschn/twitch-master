@@ -153,10 +153,10 @@ setInterval(function() {
 			}
 		})
 		var currVotes = 0;
-		var command = 0;
+		var command = "nop";
 		elCounterArray.forEach(function(currentFuck) {
 			console.log(currentFuck);
-			if (currentfuck[0] > currVotes) {
+			if (currentFuck[0] > currVotes) {
 				currVotes = currentFuck[0];
 				command = currentFuck[1];
 			}
