@@ -154,13 +154,15 @@ setInterval(function() {
 		})
 		elCounterArray.sort(sortFunction);
 		var sortIndex = 0;
-		console.log(elCounterArray[sortIndex])
+		
 		var currIt = 0;
 		elCounterArray.forEach(function(currentFuck) {
 			elSortArray[currIt] = currentFuck;
 			currIt++;
 		})
-
+		console.log(elSortArray);
+		console.log(sortIndex);
+		console.log(elSortArray[sortIndex])
 		if (exports.map[elSortArray[sortIndex][1]] == undefined) {
 			console.log("No commands.");
 			console.log(elSortArray[sortIndex]);
