@@ -153,6 +153,8 @@ setInterval(function() {
 			}
 		})
 		elCounterArray.sort(sortFunction);
+		console.log(elVotingArray);
+		console.log(elCounterArray);
 		var sortIndex = 0;
 		
 		var currIt = 0;
