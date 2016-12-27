@@ -152,27 +152,22 @@ setInterval(function() {
 				elCounterArray[currentVote.text][0]++;
 			}
 		})
-		elCounterArray.sort(sortFunction);
-		console.log(elVotingArray);
-		console.log(elCounterArray);
-		var sortIndex = 0;
-		
-		var currIt = 0;
+		var currVotes = 0;
+		var command = 0;
 		elCounterArray.forEach(function(currentFuck) {
-			elSortArray[currIt] = currentFuck;
-			currIt++;
-		})
-		console.log(elSortArray);
-		console.log(sortIndex);
-		console.log(elSortArray[sortIndex])
-		if (exports.map[elSortArray[sortIndex][1]] == undefined) {
+			if (currentfuck[0] > currVotes) {
+				currVotes = currentFuck[0];
+				command = currentfuck[1];
+			}
+		});
+		if (exports.map[command] == undefined) {
 			console.log("No commands.");
-			console.log(elSortArray[sortIndex]);
+			console.log(command);
 		} else {
 
 
-		var winningCommand = elSortArray[sortIndex][1];
-		twitch_chat.say("#"+config.nick, "Winning Command: " + winningCommand + " (" + elSortArray[sortIndex][0] + " Votes, " + elVotingArray.length + " total)");
+		var winningCommand = command;
+		twitch_chat.say("#"+config.nick, "Winning Command: " + winningCommand + " (" + currVotes + " Votes, " + elVotingArray.length + " total)");
 		qemu_input(winningCommand);
 	}
 		elVotingArray = [];
