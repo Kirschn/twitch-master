@@ -156,9 +156,13 @@ setInterval(function() {
 		var command = "nop";
 		console.log(elCounterArray);
 		for (var i = 0; i < elCounterArray.length; i++) {
+			console.log("Current Counter Iteration: " +i);
 			var currentFuck = elCounterArray[i];
+			console.log("current fuck: ");
+			console.log(currentFuck);
 			console.log(currentFuck);
 			if (currentFuck[0] > currVotes) {
+				console.log("New biggest index!")
 				currVotes = currentFuck[0];
 				command = currentFuck[1];
 			}
