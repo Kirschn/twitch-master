@@ -154,6 +154,7 @@ setInterval(function() {
 		})
 		elCounterArray.sort(sortFunction);
 		var sortIndex = 0;
+		console.log(elCounterArray);
 		if (exports.map[elCounterArray[sortIndex][1]] == undefined) {
 			console.log("No commands.");
 			console.log(elCounterArray[sortIndex]);
