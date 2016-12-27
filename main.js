@@ -155,9 +155,10 @@ setInterval(function() {
 		var currVotes = 0;
 		var command = 0;
 		elCounterArray.forEach(function(currentFuck) {
+			console.log(currentFuck);
 			if (currentfuck[0] > currVotes) {
 				currVotes = currentFuck[0];
-				command = currentfuck[1];
+				command = currentFuck[1];
 			}
 		});
 		if (exports.map[command] == undefined) {
