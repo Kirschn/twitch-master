@@ -365,9 +365,9 @@
 	"power_on":      "cont",
 	"system_wakeup": "system_wakeup",
 
-	"ctrl-c":       "VOTE sendkey ctrl-c",
-	"system_reset": "VOTE system_reset",
-	"boot_cd":      "VOTE boot_set dc",
-	"boot_drive":   "VOTE boot_set cd",
-	"alt-f4":       "VOTE sendkey alt-f4"
+	"ctrl-c":       "sendkey ctrl-c",
+	"system_reset": "system_reset",
+	"boot_cd":      "boot_set dc",
+	"boot_drive":   "boot_set cd",
+	"alt-f4":       "sendkey alt-f4"
 }
